@@ -17,12 +17,14 @@ This script demonstrates how to clone a private/public GitHub repository using S
 
 ```bash
 #!/bin/bash
+USER="kkdevopsonline"  # replace with your org/user
+TOKEN="ghp_9" # your GitHub personal access token
 
-# Clone a specific GitHub repo using SSH
-# Make sure the SSH key is already added to GitHub
-
-echo "Cloning repo via SSH..."
-git clone git@github.com:kkdevopsonline/ttttt.git
+curl -s -H "Authorization: token $TOKEN" \
+"https://api.github.com/users/$USER/repos?per_page=100" | \
+grep -o 'git@[^"]*' | while read repo; do
+  git clone "$repo"
+done
 ```
 
 ---
