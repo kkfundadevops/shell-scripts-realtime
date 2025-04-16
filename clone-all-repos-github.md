@@ -1,9 +1,4 @@
-Sure! Below is a **detailed explanation of just the script you executed** (`repo.sh`) — the one that **clones a GitHub repository via SSH**, along with a full `.md` formatted documentation you can upload to your GitHub repo.
 
----
-
-```markdown
-# 🧑‍💻 GitHub Repo Clone via SSH Script – Red Hat Linux (EC2)
 
 This script demonstrates how to clone a private/public GitHub repository using SSH authentication from a Red Hat Linux EC2 instance.
 
