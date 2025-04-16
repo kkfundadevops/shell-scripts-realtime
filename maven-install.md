@@ -1,6 +1,4 @@
 
-```markdown
-# ☕ Apache Maven Installation on Red Hat EC2 – KK FUNDA
 
 This guide walks you through installing **Apache Maven 3.9.9** on a **Red Hat Linux EC2 instance**, including Java installation, Maven setup, and environment configuration.
 
