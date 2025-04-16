@@ -17,14 +17,18 @@ This script demonstrates how to clone a private/public GitHub repository using S
 
 ```bash
 #!/bin/bash
-USER="kkdevopsonline"  # replace with your org/user
-TOKEN="ghp_9" # your GitHub personal access token
+START=$(date +%s)
+USER="kkdevopsb4"  # replace with your org/user
+TOKEN="ghp_" # your GitHub personal access token
 
 curl -s -H "Authorization: token $TOKEN" \
 "https://api.github.com/users/$USER/repos?per_page=100" | \
 grep -o 'git@[^"]*' | while read repo; do
   git clone "$repo"
 done
+END=$(date +%s)
+echo "Completed in $((END - START)) seconds"
+
 ```
 
 ---
